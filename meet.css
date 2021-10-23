@@ -1,5 +1,26 @@
+/**
+ * Copyright (c) 2021 William Merfalen
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
+ * associated documentation files (the "Software"), to deal in the Software without restriction, 
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or
+ * substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+ * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS 
+ * OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+(function(){
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+@import url('https://bnull.net/css/fontawesome-free-6.0.0-beta2-web/css/all.min.css');
 
 :root {
 	--main-bg-color: black;
@@ -15,6 +36,7 @@
 	--speaker-font-size: 18pt;
 	--mono-coding-font: 'Chakra Petch', sans-serif;
 	--font: 'Chakra Petch', sans-serif;
+	--nav-bar-border-color: white;
 }
 
 /**
@@ -74,10 +96,41 @@ div, p, a, li {
 
 /**
  * - Latches onto the first <p> tag inside div#main and sizes it so that it's less greedy
+ * - Adds a gradient from top to bottom
+ * - Adds highlighted border around the vertical nav bar
  */
 #main > p:first-child {
-	min-width: 180px;
+	min-width: 320px;
 	float: left;
+	background-image: linear-gradient(#0a0a0a, #030303);
+	border-left: 1px solid var(--nav-bar-border-color);
+	border-top: 1px solid var(--nav-bar-border-color);
+	border-right: 1px solid var(--nav-bar-border-color);
+	border-bottom: 1px solid var(--nav-bar-border-color);
+}
+
+/**
+ * - Removes extra padding below the last item in the nav bar
+ */
+#main > p:first-child hr {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+/**
+ * - Adds a highlighted border underneath each nav-bar link
+ */
+#main > p:first-child a {
+	font-size: 15pt;
+	margin-top: 4em;
+}
+
+#main > p:first-child i.navbar-icon {
+	font-size: 18pt;
+	min-width: 2em;
+	padding-left: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 /**
@@ -151,6 +204,20 @@ section.header div.outermenu nav.menu ul li a {
 	color: var(--menu-fg-color);
 }
 
+/**
+ * - maximize the hover and click area for the navbar icons
+ */
+div.max-real-estate {
+	width: 100%;
+	height: 100%;
+}
+
+div.max-real-estate:hover {
+	background-color: #0a0a0a;
+	filter: sepia(2.0);
+	cursor: pointer;
+}
+
 @media (max-width: 768px) {
 	#main {
 		width: 730px;
@@ -161,3 +228,9 @@ section.header div.outermenu nav.menu ul li a {
 		margin-right: 0px;
 	}
 }
+/*
+node_modules/@fortawesome/fontawesome-free/svgs/regular/handshake.svg
+node_modules/@fortawesome/fontawesome-free/svgs/solid/handshake-alt-slash.svg
+node_modules/@fortawesome/fontawesome-free/svgs/solid/handshake-slash.svg
+node_modules/@fortawesome/fontawesome-free/svgs/solid/handshake.svg
+*/

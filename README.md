@@ -32,4 +32,4 @@ MIT license
 - [Email me at wmerfalen@gmail.com](mailto:wmerfalen@gmail.com)
 
 # Version
-0.0.1
+0.0.2

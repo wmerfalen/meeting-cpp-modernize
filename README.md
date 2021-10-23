@@ -25,8 +25,8 @@ I simply want to give back to the community. You may use the assets in this repo
 - [ ] Verify all viewport sizes display a user-friendly experience
 
 # Contact
-Hit me up on [Twitter](https://twitter.com/lmdbkraft)
-[Email me](mailto:wmerfalen@gmail.com)
+- Hit me up on [Twitter @lmdbkraft](https://twitter.com/lmdbkraft)
+- [Email me at wmerfalen@gmail.com](mailto:wmerfalen@gmail.com)
 
 # Version
 0.0.1

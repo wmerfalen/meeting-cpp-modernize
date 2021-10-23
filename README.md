@@ -1,8 +1,8 @@
 # meeting-cpp-modernize
 Some CSS and a tiny bit of Vanilla Javascript to give https://meetingcpp.com/ a more "modern" look.
 
-# All code here is free to use
-I simply want to give back to the community. You may use the assets in this repo to stylize your site, granted it's meetingcpp.com.
+# License
+MIT license
 
 # Current features
 - [x] Speaker images have nice rounded borders

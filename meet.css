@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+
+:root {
+	--main-bg-color: black;
+	--main-fg-color: white;
+	/** This blue color is taken from stack overflow's links */
+	--link-color: rgb(0, 116, 204);
+	--link-hover-color: rgb(0, 116, 204);
+	--link-bg-color: blue;
+	--latest-news-bg-color: #262626;
+	--menu-bg-color: red;
+	--menu-fg-color: green;
+	--speaker-font: 'Chakra Petch', sans-serif;
+	--speaker-font-size: 18pt;
+	--mono-coding-font: 'Chakra Petch', sans-serif;
+	--font: 'Chakra Petch', sans-serif;
+}
+
+/**
+ * - Applies the mono coding font to basically everything
+ */
+div, p, a, li {
+	font-family: var(--mono-coding-font);
+}
+
+#main {
+	background-color: var(--main-bg-color);
+	color: var(--main-fg-color);
+}
+
+#main a:visited{
+	color: var(--link-color);
+	text-decoration: none;
+}
+#main a:active {
+	color: var(--link-color);
+	text-decoration: none;
+}
+#main a:hover {
+	color: var(--link-hover-color);
+	filter: invert(100%);
+	text-decoration: none;
+}
+#main a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+/**
+ * - changes "Welcome to Meeting C++!" text to a different font
+ */
+#main h1 {
+	clear: both;
+}
+
+/**
+ * - displays the thumbnail grid in a more compact space
+ * - 2 columns of 3 rows of images
+ */
+#main .thumbnail_grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	float: right;
+}
+
+/**
+ * - Removes margin around main part of #main div.
+ * - blends in to the black background of the nav header
+ */
+#main {
+	margin: 0px;
+}
+
+/**
+ * - Latches onto the first <p> tag inside div#main and sizes it so that it's less greedy
+ */
+#main > p:first-child {
+	min-width: 180px;
+	float: left;
+}
+
+/**
+ * - Pushes the woboq think-cell image below the re-organized nav (#main > p:first-child)
+ */
+div#main div.grid_300 {
+	clear: both;
+}
+
+.flex-2-cols {
+	justify-content: unset;
+}
+.flex-2-cols .col-right {
+	border-radius: 9px;
+	margin: 0.4em;
+	padding: 0.5em;
+}
+
+.flex-2-cols .col-right h1 {
+	padding: 0px;
+	margin: 0px;
+}
+
+/**
+ * - Removes default user-agent styling which adds padding and margin
+ */
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+body div.flex-2-cols div.grid_3 img.gridimg {
+	border-radius: 9999px;
+	width: 12em;
+}
+
+/** 
+ * - Adds nice rounded corners around the social media icons 
+ * - Makes Meetup icon roughly the same size as the other icons
+ * - makes YouTub icon roughly the same size as the other icons
+ */
+section.header div.gridcenteritem img.gridimg {
+	border-radius: 29px;
+	width: 4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section.header div.gridcenteritem img.gridimg[src="files/mcpp/yt.png" ] {
+	height: 3.9em;
+	width: 4.9em;
+}
+section.header div.gridcenteritem img.gridimg[src="files/meetup.png"] {
+	height: 4.2em;
+	width: 4.3em;
+}
+/**
+ * - END nice rounded corners section
+ */
+
+/**
+ * - Applies nice looking fonts for speaker names
+ */
+#main div.grid_3 div.gridcenteritem p strong {
+	font-family: var(--speaker-font);
+	font-size: var(--speaker-font-size);
+}
+
+section.header div.outermenu nav.menu ul li a {
+	background-color: var(--menu-bg-color);
+	color: var(--menu-fg-color);
+}
+
+@media (max-width: 768px) {
+	#main {
+		width: 730px;
+		min-width: 730px;
+	}
+	#main .thumbnail_grid {
+		max-width: 324px;
+		margin-right: 0px;
+	}
+}

@@ -17,6 +17,9 @@ I simply want to give back to the community. You may use the assets in this repo
 - [x] Removes default user-agent styling on the body tag to give the site no padding/margins near the document edges (provides a streamlined interface)
 - [x] Colors and font families are controlled via CSS variables wherever possible
 
+# Status of Responsiveness
+- As of version `0.0.1`, the code currently only works well on screens with a max-width of 768px. 
+- More responsive CSS rules will be written to scale the site to all sizes of displays
 
 # Needed features
 - [ ] Documented way to host the content on the site
